@@ -26,7 +26,53 @@ int main() {
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    // Inclua o uso de continue e break dentro dos loops.+
 
-    return 0;
+
+    //Nível novato:
+    int opcao;
+    do{
+        printf("Jogo de Xadrez:\n");
+        printf("1. Torre\n");
+        printf("2. Rainha\n");
+        printf("3. Bispo\n");
+        printf("4. Sair\n");
+        printf("Escolha uma opção: \n");
+        scanf("%d", &opcao);
+    
+        switch(opcao) {
+        case 1:
+        //Movimento da Torre 5 casas para frente
+        for(int i=0; i<5; i++){
+            printf("Frente \n"); //Imprime a direção do movimento
+            }
+        break;
+
+        case 2:
+     //Movimento da Rainha 5 casas para a Esquerda  
+        int j=1;
+        while (j<=5){
+            printf("Esquerda \n"); //Imprime a direção do movimento
+            j++;
+        }
+        break;
+
+        case 3:
+        //Movimento do Bispo 5 casas na diagonal
+        int k=1;
+        do {
+         printf("Cima-Direita \n"); //Imprime a direção do movimento (Diagonal)
+         k++;
+        } while (k <= 5);
+        break;
+
+        case 4:
+            printf("Saindo...\n");
+            break;
+
+        }
+    }while (opcao != 4);
+
+return 0;
+
 }
